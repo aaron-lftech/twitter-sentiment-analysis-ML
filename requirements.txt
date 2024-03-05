@@ -1,0 +1,18 @@
+numpy==1.24.3
+pandas==2.2.1
+matplotlib==3.8.3
+scikit-learn==1.4.1.post1
+tensorflow==2.15.0
+tweepy==4.14.0
+nltk==3.8.1
+spacy==3.7.4
+jupyterlab==4.1.3
+flask==3.0.2
+gunicorn==21.2.0
+python-dotenv==1.0.1
+requests==2.31.0
+beautifulsoup4==4.12.3
+
+#torch and torchvision versions with GPU CUDA compatibility
+https://download.pytorch.org/whl/nightly/cu121/torch-2.3.0.dev20240304%2Bcu121-cp311-cp311-win_amd64.whl
+https://download.pytorch.org/whl/nightly/cu121/torchvision-0.18.0.dev20240304%2Bcu121-cp311-cp311-win_amd64.whl
