@@ -12,6 +12,9 @@ gunicorn==21.2.0
 python-dotenv==1.0.1
 requests==2.31.0
 beautifulsoup4==4.12.3
+seaborn==0.13.2
+wordcloud==1.9.3
+textblob==0.18.0.post0
 
 #torch and torchvision versions with GPU CUDA compatibility
 https://download.pytorch.org/whl/nightly/cu121/torch-2.3.0.dev20240304%2Bcu121-cp311-cp311-win_amd64.whl

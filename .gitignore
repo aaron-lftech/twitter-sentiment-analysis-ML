@@ -24,3 +24,4 @@ pip-delete-this-directory.txt
 .env
 .mypy_cache/
 data/raw/training.1600000.processed.noemoticon.csv
+data/processed/preprocessed_tweets.csv
