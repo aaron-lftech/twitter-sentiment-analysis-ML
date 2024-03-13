@@ -60,3 +60,29 @@ def build_simple_RNN_model(input_length, learning_rate=0.001, vocab_size=10000, 
     optimizer = Adam(learning_rate=learning_rate)
     model.compile(optimizer=optimizer, loss='binary_crossentropy', metrics=['accuracy'])
     return model
+
+def build_LSTM_model(input_length, vocab_size=10000, embedding_dim=100, lstm_units=64, learning_rate=0.001, l2_reg=0.001):
+    model = Sequential()
+    model.add(Input(shape=(input_length,)))
+    model.add(Embedding(input_dim=vocab_size, output_dim=embedding_dim))
+    model.add(LSTM(lstm_units, return_sequences=False, kernel_regularizer=l2(l2_reg)))
+    model.add(Dense(64, activation='relu'))
+    model.add(Dropout(0.5))
+    model.add(Dense(1, activation='sigmoid'))
+    
+    optimizer = Adam(learning_rate=learning_rate)
+    model.compile(optimizer=optimizer, loss='binary_crossentropy', metrics=['accuracy'])
+    return model
+
+def build_GRU_model(input_length, vocab_size=10000, embedding_dim=100, gru_units=64, learning_rate=0.001):
+    model = Sequential()
+    model.add(Input(shape=(input_length,)))
+    model.add(Embedding(input_dim=vocab_size, output_dim=embedding_dim))
+    model.add(GRU(gru_units))
+    model.add(Dense(64, activation='relu'))
+    model.add(Dropout(0.5))
+    model.add(Dense(1, activation='sigmoid'))
+    
+    optimizer = Adam(learning_rate=learning_rate)
+    model.compile(optimizer=optimizer, loss='binary_crossentropy', metrics=['accuracy'])
+    return model
